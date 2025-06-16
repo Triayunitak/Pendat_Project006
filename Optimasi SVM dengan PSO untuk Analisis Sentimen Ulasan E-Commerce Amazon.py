@@ -24,7 +24,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # ========== LOAD DATASET ==========
-csv_path = r"d:\GALLERY\PATTOART\SEMESTER 4\PENDAT\amazone_reviews.csv"
+csv_path = r"D:\masterprog\XAMPP\htdocs\Pendat_Project006\amazone_reviews.csv"
 df = pd.read_csv(csv_path,
                  usecols=['reviews.text', 'reviews.rating', 'reviews.title', 'name'],
                  low_memory=False)
