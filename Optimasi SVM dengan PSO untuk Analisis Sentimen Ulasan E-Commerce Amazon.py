@@ -86,7 +86,7 @@ def objective_function(params):
     model = SVC(C=C, gamma=gamma, kernel='rbf', class_weight='balanced')  # gunakan class_weight
     model.fit(X_train, y_train)
     preds = model.predict(X_val)
-    score = accuracy_score(y_val, preds)
+    score = accuracy_score(y_val, preds) #score = accuracy_score(y_val, preds)
     print(f"Validation Accuracy: {score}")
     return -score  # karena PSO meminimalkan fungsi
 
@@ -105,7 +105,7 @@ model.fit(X_final_train, y_final_train)
 y_pred = model.predict(X_test.toarray())
 
 # ========== EVALUASI HASIL ==========
-print("=== Classification Report ===")
+print("=== Classification Report ===") #untuk Precision, Recall, F1-Score untuk tiap kelas (positive, neutral, negative).
 print(classification_report(y_test, y_pred, target_names=le.classes_))
 
 print("=== Confusion Matrix ===")
