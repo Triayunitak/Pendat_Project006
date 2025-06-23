@@ -20,7 +20,7 @@ nltk.download('stopwords')
 csv_path = r"D:\masterprog\XAMPP\htdocs\Pendat_Project006\amazone_reviews.csv"
 df = (pd.read_csv(csv_path, usecols=['reviews.text', 'reviews.rating', 'reviews.title', 'name'], low_memory=False)
         .dropna(subset=['reviews.text', 'reviews.rating'])
-        .sample(n=3000, random_state=42)
+        .sample(n=10000, random_state=42)
         .reset_index(drop=True))
 
 df.columns = ['review', 'rating', 'title', 'product']
